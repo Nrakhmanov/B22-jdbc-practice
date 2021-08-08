@@ -11,8 +11,12 @@ public class DBUtilPractice {
     @Test
     public void test1() {
 
+        String dbUrl = "jdbc:oracle:thin:@54.92.248.102:1521:XE";
+        String dbUsername = "hr";
+        String dbPassword = "hr";
+
         //create connection
-        DBUtils.createConnection();
+        DBUtils.createConnection(dbUrl,dbUsername,dbPassword);
 
         String query = "SELECT first_name,last_name,salary,job_id " +
         "from employees " + " where rownum <6";
@@ -31,7 +35,12 @@ public class DBUtilPractice {
     @Test
     public void test2() {
 
-        DBUtils.createConnection();
+        String dbUrl = "jdbc:oracle:thin:@54.92.248.102:1521:XE";
+        String dbUsername = "hr";
+        String dbPassword = "hr";
+
+        DBUtils.createConnection(dbUrl, dbUsername, dbPassword);
+
 
         String query = "SELECT first_name,last_name,salary,job_id " +
                 "from employees " + " where rownum <2";
